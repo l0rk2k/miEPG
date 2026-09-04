@@ -12,7 +12,7 @@ jobs:
 
     steps:
     - name: Checkout del repositorio
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Comprobar e Instalar xmllint
       run: |
@@ -33,7 +33,7 @@ jobs:
     - name: Subir archivos 
       run: |
         git add .
-        git commit -m "Nuevo miEPG.xml"
+        git diff --cached --quiet || git commit -m "chore: actualizar EPG de PlusTV"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -272,6 +272,8 @@ if [ $? -eq 0 ]; then
 
     cp miEPG.xml epg_acumulado.xml
     echo " epg_acumulado.xml actualizado para la próxima sesión."
+    gzip -9 -c miEPG.xml > miEPG.xml.gz
+    echo " miEPG.xml.gz generado para clientes IPTV."
 else
     echo " ❌ ERROR: Se han detectado fallos en la estructura del XML."
     echo "──────────────────────────────────────────────────────────────────"

@@ -1,5 +1,16 @@
 # miEPG v3.7
 
+## Configuración PlusTV
+
+Este fork genera diariamente una guía reducida para los canales incluidos en
+`lista2.m3u` de PlusTV. Usa como origen `guiatv_sincolor.xml.gz`, conserva
+hasta 40 días de histórico para catch-up y publica tanto `miEPG.xml` como
+`miEPG.xml.gz`.
+
+URL recomendada para la aplicación:
+
+`https://raw.githubusercontent.com/l0rk2k/miEPG/main/miEPG.xml.gz`
+
 ## Descripción
 
 Este repositorio utiliza **GitHub Actions** para generar un archivo XML a partir de múltiples EPGs. Puedes personalizar el **nombre**, el **logo** y el **horario** de cada canal.
@@ -73,5 +84,4 @@ Una vez completado el fork, nos aparecerá en nuestra cuenta el repositorio "for
   - Abre una pull request desde nueva rama hacia master en tu fork.
 
   - Ve a la pestaña "Actions" y verifica que los tests se están ejecutando correctamente en base a los workflows definidos en la carpeta .github/workflows/ del proyecto.
-
 
